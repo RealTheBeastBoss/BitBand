@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://fg7nusmcxv4c"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/title_screen.gd" id="1_0r2u2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i7bxk"]
+font_size = 69
+
+[sub_resource type="Theme" id="Theme_8hcmg"]
+default_font_size = 42
+
+[sub_resource type="Theme" id="Theme_u0s4c"]
+default_font_size = 42
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0r2u2")
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.0
+offset_top = 45.0
+offset_right = 179.0
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Game Title"
+label_settings = SubResource("LabelSettings_i7bxk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Solo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 244.0
+offset_right = 121.0
+offset_bottom = 310.0
+grow_horizontal = 2
+theme = SubResource("Theme_8hcmg")
+text = "Solo Career"
+
+[node name="Band" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 380.0
+offset_right = 119.0
+offset_bottom = 446.0
+grow_horizontal = 2
+theme = SubResource("Theme_u0s4c")
+text = "Band Mode"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -24.0
+offset_right = 56.5
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_u0s4c")
+text = "Quit"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = -160.0
+offset_right = 401.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_u0s4c")
+text = "Settings"
+
+[node name="Help" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 267.0
+offset_top = -24.0
+offset_right = 369.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_u0s4c")
+text = "Help"
+
+[connection signal="pressed" from="Solo" to="." method="_on_solo_pressed"]
+[connection signal="pressed" from="Band" to="." method="_on_band_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
