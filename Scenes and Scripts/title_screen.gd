@@ -1,5 +1,7 @@
 extends Control
 
+# The "Button" nodes will be converted into "TextureButton" nodes once we have the textures
+
 func _on_quit_pressed():
 	get_tree().quit()
 
