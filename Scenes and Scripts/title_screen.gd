@@ -9,10 +9,10 @@ func _on_solo_pressed(): # The Code below allows one to change the scene current
 	get_tree().change_scene_to_file("res://Scenes and Scripts/solo_screen.tscn")
 
 func _on_band_pressed():
-	pass
+	get_tree().change_scene_to_file("res://Scenes and Scripts/online_menu_screen.tscn")
 
 func _on_settings_pressed():
 	get_tree().change_scene_to_file("res://Scenes and Scripts/settings_screen.tscn")
 
 func _on_help_pressed():
-	pass
+	get_tree().change_scene_to_file("res://Scenes and Scripts/tutorial.tscn")

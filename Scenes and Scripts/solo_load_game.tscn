@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0jnm1l0n5ogq"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/solo_load_game.gd" id="1_pi14u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i8ogp"]
+font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_5frdd"]
+font_size = 42
+
+[sub_resource type="Theme" id="Theme_obnqn"]
+default_font_size = 42
+
+[node name="SoloLoadGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pi14u")
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -343.0
+offset_top = 45.0
+offset_right = 343.0
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Select a Saved Game"
+label_settings = SubResource("LabelSettings_i8ogp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -436.5
+offset_top = -316.0
+offset_right = 436.5
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Saved Games will dynamically appear here when the fancy shmancy code gets added"
+label_settings = SubResource("LabelSettings_5frdd")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -33.0
+offset_right = 305.0
+offset_bottom = 33.0
+grow_vertical = 2
+theme = SubResource("Theme_obnqn")
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

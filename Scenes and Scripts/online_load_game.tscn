@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3ekmfc5pv3v5"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/online_load_game.gd" id="1_v10ts"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8acl8"]
+font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_s1ttr"]
+font_size = 42
+
+[sub_resource type="Theme" id="Theme_m7biu"]
+default_font_size = 42
+
+[node name="OnlineLoadGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v10ts")
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.5
+offset_top = 45.0
+offset_right = 462.5
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Select an Online Save Game"
+label_settings = SubResource("LabelSettings_8acl8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -389.0
+offset_top = -270.0
+offset_right = 389.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Online Save Games will dynamically appear here... somehow"
+label_settings = SubResource("LabelSettings_s1ttr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -33.0
+offset_right = -470.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_m7biu")
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,212 @@
+[gd_scene load_steps=7 format=3 uid="uid://blgsospy8g08d"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/online_select_instrument.gd" id="1_6li02"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o14fr"]
+font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_sn0kw"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_rpn84"]
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_6ffk6"]
+default_font_size = 42
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c0wp"]
+font_size = 27
+
+[node name="SoloSelectInstrument" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6li02")
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -382.0
+offset_top = 45.0
+offset_right = 382.0
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Select your Instrument"
+label_settings = SubResource("LabelSettings_o14fr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -323.0
+offset_right = 214.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.5
+offset_top = 20.0
+offset_right = 182.5
+offset_bottom = 65.0
+grow_horizontal = 2
+text = "Image and Descriptions"
+label_settings = SubResource("LabelSettings_sn0kw")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.5
+offset_top = -74.0
+offset_right = 182.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "BOTTOM TEXT"
+label_settings = SubResource("LabelSettings_sn0kw")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_rpn84")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyboard" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1095.0
+offset_top = 804.0
+offset_right = 1297.0
+offset_bottom = 870.0
+theme = SubResource("Theme_6ffk6")
+text = "Keyboard"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 441.0
+offset_top = -501.0
+offset_right = 546.0
+offset_bottom = -435.0
+grow_vertical = 0
+theme = SubResource("Theme_6ffk6")
+text = "Back"
+
+[node name="Bass" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 530.0
+offset_top = -146.0
+offset_right = 635.0
+offset_bottom = -80.0
+grow_vertical = 0
+theme = SubResource("Theme_6ffk6")
+text = "Bass"
+
+[node name="Select" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.5
+offset_top = -186.0
+offset_right = 64.5
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_6ffk6")
+text = "Select"
+
+[node name="Vocals" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1358.0
+offset_top = -146.0
+offset_right = 1495.0
+offset_bottom = -80.0
+grow_vertical = 0
+theme = SubResource("Theme_6ffk6")
+text = "Vocals"
+
+[node name="Guitar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 892.0
+offset_top = -355.0
+offset_right = 1029.0
+offset_bottom = -289.0
+grow_vertical = 0
+theme = SubResource("Theme_6ffk6")
+text = "Guitar"
+
+[node name="Drums" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 678.0
+offset_top = 264.0
+offset_right = 822.0
+offset_bottom = 330.0
+grow_vertical = 2
+theme = SubResource("Theme_6ffk6")
+text = "Drums"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 473.0
+offset_bottom = 115.0
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This will have the player's status"
+label_settings = SubResource("LabelSettings_4c0wp")
+
+[connection signal="pressed" from="Keyboard" to="." method="_on_keyboard_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Bass" to="." method="_on_bass_pressed"]
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]
+[connection signal="pressed" from="Vocals" to="." method="_on_vocals_pressed"]
+[connection signal="pressed" from="Guitar" to="." method="_on_guitar_pressed"]
+[connection signal="pressed" from="Drums" to="." method="_on_drums_pressed"]
