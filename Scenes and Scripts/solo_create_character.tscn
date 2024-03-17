@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpkylbnx5j8pm"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/solo_create_character.gd" id="1_nmqtn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sh84t"]
+font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_lw4yg"]
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_ggrmy"]
+default_font_size = 42
+
+[node name="SoloCreateCharacter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nmqtn")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -369.5
+offset_top = 45.0
+offset_right = 369.5
+offset_bottom = 140.0
+grow_horizontal = 2
+text = "Create your Character"
+label_settings = SubResource("LabelSettings_sh84t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = -288.0
+offset_right = 279.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -46.5
+offset_right = 216.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Character Creation Waz 'Ere
+or rather, Will Be 'Ere"
+label_settings = SubResource("LabelSettings_lw4yg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 274.0
+offset_top = -33.0
+offset_right = 379.0
+offset_bottom = 33.0
+grow_vertical = 2
+theme = SubResource("Theme_ggrmy")
+text = "Back"
+
+[node name="Done" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1518.0
+offset_top = -33.0
+offset_right = 1623.0
+offset_bottom = 33.0
+grow_vertical = 2
+theme = SubResource("Theme_ggrmy")
+text = "Done"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Done" to="." method="_on_done_pressed"]
