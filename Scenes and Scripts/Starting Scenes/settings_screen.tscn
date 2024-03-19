@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3bp18p0vetrn"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/settings_screen.gd" id="1_qq81i"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/settings_screen.gd" id="1_qq81i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_emg61"]
 font_size = 69

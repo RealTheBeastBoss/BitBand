@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfn803a0xsnwc"]
+[gd_scene load_steps=7 format=3 uid="uid://blgsospy8g08d"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/solo_select_instrument.gd" id="1_rwdbp"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/online_select_instrument.gd" id="1_6li02"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o14fr"]
 font_size = 69
@@ -14,6 +14,9 @@ font_size = 32
 [sub_resource type="Theme" id="Theme_6ffk6"]
 default_font_size = 42
 
+[sub_resource type="LabelSettings" id="LabelSettings_4c0wp"]
+font_size = 27
+
 [node name="SoloSelectInstrument" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -21,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rwdbp")
+script = ExtResource("1_6li02")
 metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="."]
@@ -187,6 +190,18 @@ offset_bottom = 330.0
 grow_vertical = 2
 theme = SubResource("Theme_6ffk6")
 text = "Drums"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 473.0
+offset_bottom = 115.0
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This will have the player's status"
+label_settings = SubResource("LabelSettings_4c0wp")
 
 [connection signal="pressed" from="Keyboard" to="." method="_on_keyboard_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

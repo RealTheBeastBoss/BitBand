@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b35kdqymb8fro"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/vinyl_selector.gd" id="1_xj8i7"]
+[ext_resource type="Texture2D" uid="uid://b3wmfm5ln4h8v" path="res://Art/selling vinyl shutterstock 234267241.webp" id="2_b7ouc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gv1g3"]
+radius = 269.186
+
+[node name="VinylSelector" type="Node2D"]
+script = ExtResource("1_xj8i7")
+
+[node name="Area2D" type="Area2D" parent="."]
+priority = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gv1g3")
+
+[node name="Vinyl" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_b7ouc")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_vinyl_input_event"]
