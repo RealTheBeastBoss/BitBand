@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b35kdqymb8fro"]
+[gd_scene load_steps=5 format=3 uid="uid://b35kdqymb8fro"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/vinyl_selector.gd" id="1_xj8i7"]
 [ext_resource type="Texture2D" uid="uid://b3wmfm5ln4h8v" path="res://Art/selling vinyl shutterstock 234267241.webp" id="2_b7ouc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv1g3"]
 radius = 269.186
+
+[sub_resource type="LabelSettings" id="LabelSettings_hwm1v"]
+font_size = 32
 
 [node name="VinylSelector" type="Node2D"]
 script = ExtResource("1_xj8i7")
@@ -17,5 +20,49 @@ shape = SubResource("CircleShape2D_gv1g3")
 
 [node name="Vinyl" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("2_b7ouc")
+
+[node name="Top" type="Marker2D" parent="Area2D/Vinyl"]
+position = Vector2(0, -261)
+
+[node name="Right" type="Marker2D" parent="Area2D/Vinyl"]
+position = Vector2(258, 0)
+
+[node name="Left" type="Marker2D" parent="Area2D/Vinyl"]
+position = Vector2(-259, 0)
+
+[node name="Bottom" type="Marker2D" parent="Area2D/Vinyl"]
+position = Vector2(0, 258)
+
+[node name="TopLabel" type="Label" parent="Area2D/Vinyl"]
+offset_left = -26.0
+offset_top = -273.0
+offset_right = 32.0
+offset_bottom = -228.0
+text = "Top"
+label_settings = SubResource("LabelSettings_hwm1v")
+
+[node name="Label2" type="Label" parent="Area2D/Vinyl"]
+offset_left = 183.0
+offset_top = -23.0
+offset_right = 263.0
+offset_bottom = 22.0
+text = "Right"
+label_settings = SubResource("LabelSettings_hwm1v")
+
+[node name="Label3" type="Label" parent="Area2D/Vinyl"]
+offset_left = -262.0
+offset_top = -23.0
+offset_right = -182.0
+offset_bottom = 22.0
+text = "Left"
+label_settings = SubResource("LabelSettings_hwm1v")
+
+[node name="Label4" type="Label" parent="Area2D/Vinyl"]
+offset_left = -56.0
+offset_top = 215.0
+offset_right = 62.0
+offset_bottom = 260.0
+text = "Bottom"
+label_settings = SubResource("LabelSettings_hwm1v")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_vinyl_input_event"]

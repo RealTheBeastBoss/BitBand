@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bairoxj5v3350"]
+[gd_scene load_steps=6 format=3 uid="uid://bairoxj5v3350"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/solo_select_instrument.gd" id="1_gomdt"]
 [ext_resource type="PackedScene" uid="uid://b35kdqymb8fro" path="res://Scenes and Scripts/Starting Scenes/vinyl_selector.tscn" id="2_vk3sq"]
@@ -8,6 +8,9 @@ default_font_size = 42
 
 [sub_resource type="LabelSettings" id="LabelSettings_pvt1v"]
 font_size = 69
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ch3x"]
+font_size = 52
 
 [node name="SoloSelectInstrument" type="Node2D"]
 script = ExtResource("1_gomdt")
@@ -37,4 +40,13 @@ grow_vertical = 2
 text = "Select your Instrument"
 label_settings = SubResource("LabelSettings_pvt1v")
 
+[node name="Instrument" type="Label" parent="."]
+offset_left = 805.0
+offset_top = 269.0
+offset_right = 1087.0
+offset_bottom = 341.0
+text = "Instrument"
+label_settings = SubResource("LabelSettings_0ch3x")
+
+[connection signal="selection_changed" from="VinylSelector" to="." method="_on_vinyl_selector_selection_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
