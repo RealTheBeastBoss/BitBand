@@ -10,10 +10,6 @@ var last_rotation = 0
 signal selection_changed(new_selection)
 
 @onready var vinyl = $Area2D/Vinyl
-@onready var top = $Area2D/Vinyl/Top
-@onready var right = $Area2D/Vinyl/Right
-@onready var left = $Area2D/Vinyl/Left
-@onready var bottom = $Area2D/Vinyl/Bottom
 
 func _input(event: InputEvent):
 	if event is InputEventMouseButton:

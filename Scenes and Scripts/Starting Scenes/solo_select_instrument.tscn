@@ -45,8 +45,9 @@ offset_left = 805.0
 offset_top = 269.0
 offset_right = 1087.0
 offset_bottom = 341.0
-text = "Instrument"
+text = "Top"
 label_settings = SubResource("LabelSettings_0ch3x")
+horizontal_alignment = 1
 
 [connection signal="selection_changed" from="VinylSelector" to="." method="_on_vinyl_selector_selection_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

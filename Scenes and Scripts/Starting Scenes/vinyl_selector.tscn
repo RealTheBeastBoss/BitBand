@@ -21,18 +21,6 @@ shape = SubResource("CircleShape2D_gv1g3")
 [node name="Vinyl" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("2_b7ouc")
 
-[node name="Top" type="Marker2D" parent="Area2D/Vinyl"]
-position = Vector2(0, -261)
-
-[node name="Right" type="Marker2D" parent="Area2D/Vinyl"]
-position = Vector2(258, 0)
-
-[node name="Left" type="Marker2D" parent="Area2D/Vinyl"]
-position = Vector2(-259, 0)
-
-[node name="Bottom" type="Marker2D" parent="Area2D/Vinyl"]
-position = Vector2(0, 258)
-
 [node name="TopLabel" type="Label" parent="Area2D/Vinyl"]
 offset_left = -26.0
 offset_top = -273.0
