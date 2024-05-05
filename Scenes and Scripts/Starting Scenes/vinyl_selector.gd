@@ -19,12 +19,6 @@ func _input(event: InputEvent):
 			is_dragging = false
 	if is_dragging and did_click:
 		move_delta = click_position - event.position
-	if Input.is_action_just_released("left_click"):
-		did_click = false
-		last_rotation = vinyl.rotation_degrees
-
-func _physics_process(delta):
-	if is_dragging and did_click:
 		vinyl.rotation_degrees = last_rotation - move_delta.x
 		# Gets the Rotation of the Vinyl within 360:
 		var degrees = vinyl.rotation_degrees
@@ -45,6 +39,9 @@ func _physics_process(delta):
 		if new_selection != selection:
 			selection = new_selection
 			selection_changed.emit(selection)
+	if Input.is_action_just_released("left_click"):
+		did_click = false
+		last_rotation = vinyl.rotation_degrees
 
 func _on_vinyl_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("left_click"):
