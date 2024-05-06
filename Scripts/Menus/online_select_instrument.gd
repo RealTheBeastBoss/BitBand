@@ -4,7 +4,7 @@ var selected_instrument = null # This will hold the instrument to be displayed
 @onready var label = $Panel/Label3 # Just a taster of my ultimate power
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://Scenes and Scripts/Starting Scenes/online_create_character.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menus/online_create_character.tscn")
 
 func _on_bass_pressed():
 	selected_instrument = "Bass" # This is a string for now

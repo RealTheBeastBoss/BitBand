@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bwg8lr52db2uq"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/online_create_character.gd" id="1_n5ow1"]
+[ext_resource type="Script" path="res://Scripts/Menus/online_create_character.gd" id="1_n5ow1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d1ftm"]
 font_size = 69

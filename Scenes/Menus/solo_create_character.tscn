@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpkylbnx5j8pm"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/solo_create_character.gd" id="1_nmqtn"]
+[ext_resource type="Script" path="res://Scripts/Menus/solo_create_character.gd" id="1_nmqtn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sh84t"]
 font_size = 69

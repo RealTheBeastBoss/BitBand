@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bairoxj5v3350"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/solo_select_instrument.gd" id="1_gomdt"]
-[ext_resource type="PackedScene" uid="uid://b35kdqymb8fro" path="res://Scenes and Scripts/Starting Scenes/vinyl_selector.tscn" id="2_vk3sq"]
+[ext_resource type="Script" path="res://Scripts/Menus/solo_select_instrument.gd" id="1_gomdt"]
+[ext_resource type="PackedScene" uid="uid://b35kdqymb8fro" path="res://Scenes/Menus/vinyl_selector.tscn" id="2_vk3sq"]
 
 [sub_resource type="Theme" id="Theme_bvqen"]
 default_font_size = 42

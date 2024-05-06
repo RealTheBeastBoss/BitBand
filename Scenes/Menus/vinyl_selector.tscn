@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b35kdqymb8fro"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Starting Scenes/vinyl_selector.gd" id="1_xj8i7"]
-[ext_resource type="Texture2D" uid="uid://b3wmfm5ln4h8v" path="res://Art/selling vinyl shutterstock 234267241.webp" id="2_b7ouc"]
+[ext_resource type="Script" path="res://Scripts/Menus/vinyl_selector.gd" id="1_xj8i7"]
+[ext_resource type="Texture2D" uid="uid://b3wmfm5ln4h8v" path="res://Assets/selling vinyl shutterstock 234267241.webp" id="2_b7ouc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv1g3"]
 radius = 269.186
