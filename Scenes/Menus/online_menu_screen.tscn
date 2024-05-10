@@ -38,61 +38,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -354.0
+offset_left = -306.0
 offset_top = -33.0
-offset_right = -249.0
+offset_right = -201.0
 offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ej3uh")
 text = "Back"
 
-[node name="CreateNew" type="Button" parent="."]
+[node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -29.0
-offset_right = 122.0
-offset_bottom = 37.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_ej3uh")
-text = "Create New"
-
-[node name="LoadGame" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -118.5
-offset_top = -165.0
-offset_right = 118.5
-offset_bottom = -99.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_ej3uh")
-text = "Load Game"
-
-[node name="Servers" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
 offset_left = -151.5
-offset_top = 239.0
+offset_top = -265.0
 offset_right = 151.5
-offset_bottom = 305.0
+offset_bottom = 33.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Servers" type="Button" parent="Buttons"]
+layout_mode = 2
 theme = SubResource("Theme_ej3uh")
 text = "Online Servers"
 
+[node name="LoadGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_ej3uh")
+text = "Load Game"
+
+[node name="CreateNew" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_ej3uh")
+text = "Create New"
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="CreateNew" to="." method="_on_create_new_pressed"]
-[connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="Servers" to="." method="_on_servers_pressed"]
+[connection signal="pressed" from="Buttons/Servers" to="." method="_on_servers_pressed"]
+[connection signal="pressed" from="Buttons/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Buttons/CreateNew" to="." method="_on_create_new_pressed"]

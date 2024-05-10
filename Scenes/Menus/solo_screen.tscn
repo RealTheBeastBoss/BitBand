@@ -31,45 +31,47 @@ grow_horizontal = 2
 text = "Solo Career"
 label_settings = SubResource("LabelSettings_ts5vn")
 
-[node name="NewGame" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -114.5
-offset_top = 271.0
-offset_right = 114.5
-offset_bottom = 337.0
-grow_horizontal = 2
-theme = SubResource("Theme_738q4")
-text = "New Game"
-
-[node name="LoadGame" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -118.5
-offset_top = 407.0
-offset_right = 118.5
-offset_bottom = 473.0
-grow_horizontal = 2
-theme = SubResource("Theme_738q4")
-text = "Load Game"
-
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -322.0
-offset_top = 407.0
-offset_right = -217.0
-offset_bottom = 473.0
+anchor_bottom = 0.5
+offset_left = -273.0
+offset_top = -33.0
+offset_right = -168.0
+offset_bottom = 33.0
 grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_738q4")
 text = "Back"
 
-[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -149.0
+offset_right = 119.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="NewGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_738q4")
+text = "New Game"
+
+[node name="LoadGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = SubResource("Theme_738q4")
+text = "Load Game"
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Buttons/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Buttons/LoadGame" to="." method="_on_load_game_pressed"]

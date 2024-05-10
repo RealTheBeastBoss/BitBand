@@ -19,35 +19,47 @@ metadata/_edit_lock_ = true
 [node name="VinylSelector" parent="." instance=ExtResource("2_vk3sq")]
 position = Vector2(960, 1077)
 
-[node name="Back" type="Button" parent="."]
-offset_left = 230.0
-offset_top = 532.0
-offset_right = 335.0
-offset_bottom = 598.0
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Back" type="Button" parent="UI"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -33.0
+offset_right = 305.0
+offset_bottom = 33.0
+grow_vertical = 2
 theme = SubResource("Theme_bvqen")
 text = "Back"
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 578.0
-offset_top = 45.0
-offset_right = 1342.0
-offset_bottom = 140.0
+[node name="Title" type="Label" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -382.0
+offset_top = 50.0
+offset_right = 382.0
+offset_bottom = 145.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "Select your Instrument"
 label_settings = SubResource("LabelSettings_pvt1v")
 
-[node name="Instrument" type="Label" parent="."]
-offset_left = 805.0
-offset_top = 269.0
-offset_right = 1087.0
-offset_bottom = 341.0
+[node name="Instrument" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -212.0
+offset_right = 141.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Top"
 label_settings = SubResource("LabelSettings_0ch3x")
 horizontal_alignment = 1
 
 [connection signal="selection_changed" from="VinylSelector" to="." method="_on_vinyl_selector_selection_changed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Back" to="." method="_on_back_pressed"]

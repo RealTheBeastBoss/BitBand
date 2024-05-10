@@ -80,29 +80,30 @@ grow_vertical = 2
 theme = SubResource("Theme_qe04r")
 text = "Back"
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1.0
-offset_top = 194.0
-offset_right = 179.0
-offset_bottom = 259.0
+offset_left = -101.0
+offset_top = 165.0
+offset_right = 101.0
+offset_bottom = 223.0
 grow_horizontal = 2
 grow_vertical = 2
-virtual_keyboard_type = 2
-clear_button_enabled = true
+theme_override_constants/separation = 50
 
-[node name="Label" type="Label" parent="LineEdit"]
-layout_mode = 0
-offset_left = -117.0
-offset_top = 2.0
-offset_right = -2.0
-offset_bottom = 60.0
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
 text = "Code:"
 label_settings = SubResource("LabelSettings_lxq4l")
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+virtual_keyboard_type = 2
+clear_button_enabled = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

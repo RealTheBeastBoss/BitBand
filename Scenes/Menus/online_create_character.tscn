@@ -97,6 +97,7 @@ theme = SubResource("Theme_v84gx")
 text = "Done"
 
 [node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 473.0
 offset_bottom = 115.0
 

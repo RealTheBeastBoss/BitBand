@@ -36,82 +36,63 @@ label_settings = SubResource("LabelSettings_i7bxk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Solo" type="Button" parent="."]
+[node name="MainButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -120.0
-offset_top = 244.0
-offset_right = 121.0
-offset_bottom = 310.0
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -160.0
+offset_right = 120.5
+offset_bottom = 160.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Solo" type="Button" parent="MainButtons"]
+layout_mode = 2
 theme = SubResource("Theme_8hcmg")
 text = "Solo Career"
 
-[node name="Band" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -120.0
-offset_top = 380.0
-offset_right = 119.0
-offset_bottom = 446.0
-grow_horizontal = 2
+[node name="Band" type="Button" parent="MainButtons"]
+layout_mode = 2
 theme = SubResource("Theme_u0s4c")
 text = "Band Mode"
 
-[node name="Quit" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -56.5
-offset_top = -24.0
-offset_right = 56.5
-offset_bottom = 42.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Quit" type="Button" parent="MainButtons"]
+layout_mode = 2
 theme = SubResource("Theme_u0s4c")
 text = "Quit"
 
-[node name="Settings" type="Button" parent="."]
+[node name="SideButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 230.0
-offset_top = -160.0
-offset_right = 401.0
-offset_bottom = -94.0
+offset_left = 171.0
+offset_top = -91.0
+offset_right = 342.0
+offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Settings" type="Button" parent="SideButtons"]
+layout_mode = 2
 theme = SubResource("Theme_u0s4c")
 text = "Settings"
 
-[node name="Help" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 267.0
-offset_top = -24.0
-offset_right = 369.0
-offset_bottom = 42.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Help" type="Button" parent="SideButtons"]
+layout_mode = 2
 theme = SubResource("Theme_u0s4c")
 text = "Help"
 
-[connection signal="pressed" from="Solo" to="." method="_on_solo_pressed"]
-[connection signal="pressed" from="Band" to="." method="_on_band_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="MainButtons/Solo" to="." method="_on_solo_pressed"]
+[connection signal="pressed" from="MainButtons/Band" to="." method="_on_band_pressed"]
+[connection signal="pressed" from="MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SideButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="SideButtons/Help" to="." method="_on_help_pressed"]
